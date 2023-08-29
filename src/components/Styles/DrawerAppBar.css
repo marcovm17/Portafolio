@@ -1,0 +1,10 @@
+.buttons__container {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+.root {
+    z-index: 10;
+    width: 100%;
+}

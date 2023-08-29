@@ -1,0 +1,118 @@
+/* Styles/AboutMe.css */
+
+/* Estilos generales */
+.aboutMe__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 2.5%;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    flex: 1;
+}
+
+.doble__container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Estilos para la descripción y las tecnologías */
+.aboutMe__description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 6%;
+    flex: 1; /* Ocupa todo el espacio disponible en el contenedor */
+} 
+.aboutMe__technologies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1; /* Ocupa todo el espacio disponible en el contenedor */
+    font-size: 2em;
+}
+
+/* Estilos para resaltar el nombre */
+.aboutMe__description .highlighted {
+    color: #1c1c1c; /* Cambia el color a tu preferencia */
+    font-weight: bold; /* Puedes ajustar el peso de la fuente según lo desees */
+}
+
+.technologies__grid{
+    display: flex;
+    flex-direction: row;
+}
+
+.aboutMe__technologies .technology {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.4em;
+}
+
+.aboutMe__technologies .technology__icon {
+    width: 1em;
+    height: 1.8em;
+    margin-bottom: 0.2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutMe__technologies .technology__name {
+    font-size: 100%;
+}
+
+/* Estilos para los iconos */
+.aboutMe__technologies .technology__icon i {
+    font-size: 1em;
+}
+
+.aboutMe__image {
+    min-width: 7%;
+    max-width: 12%;
+    margin-inline: 2%;
+    flex: 1; /* Ocupa todo el espacio disponible en el contenedor */
+}
+
+.aboutMe__image img {
+    width: 100%;
+    height: auto;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+    background-color: #30384161;
+    box-sizing: border-box;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 900px) {
+    .aboutMe__container {
+        flex-direction: column-reverse; /* Cambia la dirección de los elementos en dispositivos móviles */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+    
+    .aboutMe__description,
+    .aboutMe__technologies {
+        margin-top: 4%; /* Ajusta el margen superior */
+    }
+    
+    .aboutMe__image {
+        display: block; /* Vuelve a mostrar la imagen */
+        max-width: 18%; /* Ocupa todo el ancho disponible */
+    }
+    
+    .doble__container {
+        max-width: 100%; /* Ocupa todo el ancho disponible */
+    }
+    
+    .technologies__grid {
+        display: grid; /* Cambia a un diseño de cuadrícula */
+        grid-template-columns: repeat(2, 1fr); /* Dos tecnologías por fila */
+    }
+
+    .aboutMe__technologies .technology {
+        margin: 1em auto; /* Margen superior e inferior, centrado horizontalmente */
+    }
+}
